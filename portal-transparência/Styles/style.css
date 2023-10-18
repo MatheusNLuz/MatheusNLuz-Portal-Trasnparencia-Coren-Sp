@@ -825,7 +825,7 @@ hr {
 
     .offcanvas-menu {
         position: fixed;
-        background-color: var(--botao);
+        background-color: var(--cor-nav-botao);
         top: 0;
         left: 0;
         width: 100%;
@@ -856,13 +856,8 @@ hr {
         align-items: center;
     }
 
-    .btn-btn-search {
-        width: 35px;
-        height: 35px;
-    }
-
     .menu-toggle {
-        width: 40px;
+        width: 45px;
         height: 40px;
         border-radius: 10px;
         margin-right: 15px;
