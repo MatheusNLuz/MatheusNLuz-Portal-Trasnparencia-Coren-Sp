@@ -62,36 +62,27 @@
 
 /* ====== Drops dos btn ====== */
 
-.dropdown-container {
-    position: relative;
-}
-
 .drop-scroll-lateral-content {
+
     display: block;
+    position: absolute;
+    width: 17.5%;
+    background-color: var(--text-color-primary); 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    padding: 10px; 
     max-height: 0;
     overflow: hidden;
-    transition: max-height .5s ease-in-out;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%; /* Para ocupar a largura total do container pai */
-    background-color: rebeccapurple;
     opacity: 0;
-    transform: translateY(-10px); /* Para um efeito de transição suave */
-    pointer-events: none; /* Impede a interação com o conteúdo enquanto estiver oculto */
+    transition: max-height .5s ease, opacity .5s ease; 
+
 }
 
-.drop-scroll-lateral-content.open {
-    max-height: 350px;
+.show-dropdown {
+
+    max-height: 630px; 
     opacity: 1;
-    transform: translateY(0); /* Retorna ao local normal ao abrir */
-    pointer-events: auto; /* Permite a interação com o conteúdo quando aberto */
-}
 
-.drop-scroll-lateral-content ul {
-    background-color: rebeccapurple;
 }
-
 
 .drop-scroll-lateral-content li {
     list-style-type: none;
@@ -99,12 +90,53 @@
 }
 
 .drop-scroll-lateral-content a {
-    color: var(--text-color-primary);
+    color: var(--text-color-secondary);
     text-decoration: none;
     display: flex;
-    font-size: 14px;
-    text-align: left;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 5px;
+}
+
+.drop-scroll-lateral-content a i {
+    padding-left: 15px;
+}
+
+.dropdown-content-ul {
+    list-style-type: none;
+    display: block;
+    position: absolute;
+    margin: 0 20px;
+    width: 17.5%;
+    background-color: var(--cor-nav-botao); 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    padding: 10px; 
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .5s ease, opacity .5s ease; 
+}
+
+.dropdown-content-ul li {
+    padding: 10px 30px;
+}
+
+.dropdown-content-ul a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.ativo {
+
+    max-height: 630px; 
+    opacity: 1;
+
 }
 
 /* ====== fim dos links com dropdown, barra de navegação com carrossel ====== */
