@@ -11,3 +11,4 @@ closeBtnDoPortal.addEventListener('click', (e) => {
     e.preventDefault();
     offCanvasDoPortal.classList.remove('active')
 })
+
