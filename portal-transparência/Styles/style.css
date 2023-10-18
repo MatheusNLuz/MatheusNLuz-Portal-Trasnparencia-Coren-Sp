@@ -728,7 +728,6 @@ hr {
         line-height: 1.2;
     }
 
-
     /* ====== Rodape ====== */
 
     .rodape {
@@ -822,6 +821,7 @@ hr {
     .menu-toggle {
         display: block;
     }
+
 
     .offcanvas-menu {
         position: fixed;
@@ -974,7 +974,6 @@ hr {
         text-decoration: none;
         line-height: 1.2;
     }
-
 
     /* ====== Rodape ====== */
 
