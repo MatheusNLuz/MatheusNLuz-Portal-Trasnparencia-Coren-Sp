@@ -83,7 +83,7 @@
 
 .show-dropdown {
 
-    max-height: 630px; 
+    max-height: 950px; 
     opacity: 1;
 
 }
@@ -138,9 +138,44 @@
 
 .ativo {
 
-    max-height: 630px; 
+    max-height: 700px; 
     opacity: 1;
 
+}
+
+.dropdown-content-ul-drop {
+    list-style-type: none;
+    display: block;
+    position: absolute;
+    margin: 0 20px;
+    width: 17.5%;
+    background-color: var(--cor-nav-botao); 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    padding: 10px; 
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .5s ease, opacity .5s ease; 
+}
+
+.dropdown-content-ul-drop li {
+    padding: 10px 30px;
+}
+
+.dropdown-content-ul-drop a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+
+.ativo-do-drop {
+    max-height: 700px;
+    opacity: 1;
 }
 
 /* ====== fim dos links com dropdown, barra de navegação com carrossel ====== */
@@ -183,97 +218,27 @@
 /* ====== Final Conteudo Principal dos conteudos de cada pagina ====== */
 
 @media (max-width: 768px) {
-    .glide,
-    .glide__arrow,
-    .glide__arrow--left,
-    .glide__arrow--right
-    .drop-scroll-lateral-content,
-    .dropdown-content-ul {
-        display: none;
+
+    .show-dropdown {
+        left: 90px !important;
+        width: 40%;
+        z-index: 2;
     }
 
-    .offcanvas-responsivo-do-portal {
-        display: flex;
-        width: 100%;
-        height: 6vh;
-        background-color: var(--text-color-primary);
+    .ativo {
+        z-index: 3;
+        width: auto;
     }
 
-    .btn-btn-search-menu-responsivo {
-        background-color: var(--cor-nav-botao);
-        border: none;
-        color: var(--text-color-secondary);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        cursor: pointer;
-        margin-left: 8px;
-        margin-top: 5px;
+    .ativo-do-drop {
+        top: 105% !important;
+        left: 50% !important;
+        z-index: 4;
+        width: 40%;
     }
 
-    .menu-toggle-do-portal {
-        width: 45px;
-        height: 40px;
-        border-radius: 10px;
-        margin-right: 15px;
-        font-size: 20px;
-    }
-
-
-    .offcanvas-menu-portal {
-        position: fixed;
-        background-color: var(--cor-nav-botao);
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transform: translateX(-100%);
-        transition: all 0.4s ease;
-        z-index: 999;
-    }
-
-    .offcanvas-menu-portal.active {
-        transform: translateX(0);
-    }
-    
-    .offcanvas-nav-portal {
-        background-color: var(--body-color);
-        width: 100%;
-        padding: 20px 0;
-    }
-
-    .offcanvas-menu-portal h4 {
-        color: var(--text-color-primary);
-        padding-left: 20px;
-        font-weight: 600;
-        font-size: 16px;
-    }
-
-    .offcanvas-menu-portal ul {
-        width: 100%;
-        list-style-type: none;
-    }
-
-    .offcanvas-menu-portal ul li a {
-        font-size: 16px;
-        color: #fff;
-        font-weight: 500;
-        line-height: 4;
-        text-decoration: none;
-        padding: 0 10px;
-        transition: all 0.4s ease;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .btn-close-portal {
-        color: var(--text-color-primary);
-        position: absolute;
-        top: 10px;
-        left: 90%;
-        font-size: 30px;
+    .btn-drop-scroll {
+        width: 200px !important;
     }
 
     .conteudo-o-portal {

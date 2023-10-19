@@ -9,7 +9,7 @@ dropdownButtons.forEach((button) => {
     button.addEventListener('click', function () {
 
         verificaAberturaDosDrops(button);
-        
+
     });
 });
 
@@ -26,10 +26,21 @@ dropdownLinks.forEach((links) => {
     })
 })
 
+
+const dropdownLinkDosDrops = document.querySelectorAll('.link-do-drop-lateral');
+const dropdownListasDoDrop = document.querySelectorAll('.dropdown-content-ul-drop');
+let openedDropdownLinks = null;
+
+dropdownLinkDosDrops.forEach((link) => {
+
+    link.addEventListener('click', function () {
+        abreOsDropsDoDrop(link);
+    })
+
+})
+
+
 function verificaAberturaDosDrops(button) {
-
-
-    
 
     // Se o mesmo botão for clicado novamente, fecha o dropdown
     if (openedDropdown && openedDropdown.triggerButton === button) {
@@ -51,13 +62,13 @@ function verificaAberturaDosDrops(button) {
             // Verifica se o clique foi em um botão de dropdown ou em um item interno
             const isDropdownButton = event.target.matches('.btn-drop-scroll');
             const isDropdownItem = event.target.matches('.link-do-drop-scroll');
+            const isDropdownItemDoDrop = event.target.matches('.link-do-drop-lateral');
 
-            if (!isDropdownButton && !isDropdownItem && openedDropdown && openedDropdown.container) {
+            if (!isDropdownButton && !isDropdownItem && !isDropdownItemDoDrop && openedDropdown && openedDropdown.container) {
                 openedDropdown.container.classList.remove('show-dropdown');
                 openedDropdown = null;
             }
         });
-
 
         // Obtém o ID do dropdown associado a este botão
         const dropdownId = button.getAttribute('data-dropdown-id');
@@ -84,6 +95,7 @@ function verificaAberturaDosDrops(button) {
     }
 }
 
+
 function verificaAberturaDosDropsDentroDosDrops(links) {
 
 
@@ -98,8 +110,9 @@ function verificaAberturaDosDropsDentroDosDrops(links) {
         document.addEventListener('click', function (event) {
             event.preventDefault();
             const isDropdownLink = event.target.matches('.link-do-drop-scroll');
+            const isDropdownItem = event.target.matches('.link-do-drop-lateral')
 
-            if (!isDropdownLink && openedDropdownLink && openedDropdownLink.containerLista) {
+            if (!isDropdownLink && !isDropdownItem && openedDropdownLink && openedDropdownLink.containerLista) {
                 openedDropdownLink.containerLista.classList.remove('ativo');
                 openedDropdownLink = null;
             }
@@ -122,6 +135,52 @@ function verificaAberturaDosDropsDentroDosDrops(links) {
         openedDropdownLink = {
             containerLista: dropdownLista,
             triggerButton: links
+        };
+    }
+}
+
+
+function abreOsDropsDoDrop(link) {
+
+    if (openedDropdownLinks && openedDropdownLinks.triggerButton === link) {
+        openedDropdownLinks.containerListas.classList.remove('ativo-do-drop');
+
+        openedDropdownLinks = null;
+    } else {
+
+        if (openedDropdownLinks) {
+            openedDropdownLinks.containerListas.classList.remove('ativo-do-drop');
+        }
+
+        document.addEventListener('click', function (event) {
+
+            event.preventDefault();
+
+            const isDropdownLinks = event.target.matches('.link-do-drop-lateral');
+
+            if (!isDropdownLinks && openedDropdownLinks && openedDropdownLinks.containerListas) {
+                openedDropdownLinks.containerListas.classList.remove('ativo-do-drop');
+                openedDropdownLinks = null;
+            }
+        })
+
+        const dropdownIdLista = link.getAttribute('data-dropdown-lista');
+
+        const dropdownLista = document.querySelector(`#${dropdownIdLista}`);
+
+        const linkRect = link.getBoundingClientRect();
+        const linkTop = linkRect.top;
+        const linkLeft = linkRect.left;
+        const linkWidth = linkRect.width;
+
+        dropdownLista.style.top = `${linkTop}px`;
+        dropdownLista.style.left = `${linkLeft + linkWidth}px`;
+
+        dropdownLista.classList.add('ativo-do-drop');
+
+        openedDropdownLinks = {
+            containerListas: dropdownLista,
+            triggerButton: link
         };
     }
 }
