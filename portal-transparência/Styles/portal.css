@@ -262,3 +262,44 @@
     
 }
 
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    .show-dropdown {
+        
+        width: 30%;
+        z-index: 2;
+    }
+
+    .ativo {
+        z-index: 3;
+        width: 30%;
+    }
+
+    .ativo-do-drop {
+
+        z-index: 4;
+        width: 23%;
+    }
+
+    .btn-drop-scroll {
+        width: 200px !important;
+    }
+
+    .conteudo-o-portal {
+        position: relative;
+        width: 100%;
+        background: url(../Images/WDWD\ 1.png), lightgray 25% / cover no-repeat;
+        background-position: center center;
+    }
+
+    .conteudo-escrito {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteudo-escrito p {
+        margin: 15px 0 ;
+        margin-left: 5px;
+    }
+}
