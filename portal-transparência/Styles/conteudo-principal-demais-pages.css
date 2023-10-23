@@ -1,0 +1,75 @@
+.conteudo-o-portal {
+    width: 100%;
+    height: 100%;
+    background: url(../Images/Rectangle\ 78.png), lightgray 50% / cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.conteudo-o-portal h1 {
+    color: var(--text-color-primary);
+    margin: 60px 0;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+
+.conteudo-escrito {
+    width: 60%;
+    height: 100vh;
+    letter-spacing: 1px;
+    align-items: center;
+    text-align: left;
+    font-size: 16px;
+}
+
+.conteudo-escrito p {
+    margin: 50px 0 ;
+}
+
+/* ====== Final Conteudo Principal dos conteudos de cada pagina ====== */
+
+@media (max-width: 768px) {
+    
+    .conteudo-o-portal {
+        position: relative;
+        width: 100%;
+        background: url(../Images/WDWD\ 1.png), lightgray 25% / cover no-repeat;
+        background-position: center center;
+    }
+
+    .conteudo-escrito {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteudo-escrito p {
+        margin: 15px 0 ;
+        margin-left: 5px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    .conteudo-o-portal {
+        position: relative;
+        width: 100%;
+        background: url(../Images/WDWD\ 1.png), lightgray 25% / cover no-repeat;
+        background-position: center center;
+    }
+
+    .conteudo-escrito {
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .conteudo-escrito p {
+        margin: 15px 0 ;
+        margin-left: 5px;
+    }
+}

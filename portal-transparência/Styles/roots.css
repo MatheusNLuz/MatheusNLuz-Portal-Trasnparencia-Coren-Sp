@@ -1,0 +1,17 @@
+/* ====== Variaveis ====== */
+
+:root {
+    --body-color: #f3f7fb;
+    --nav-color: #e7e7e7;
+    --botao: #3185ef;
+    --text-color-secondary: #fff;
+    --text-color-primary: #4675b7;
+    --cor-nav-botao: #4E80C6;
+
+
+    /* ===== Dark Mode ===== */
+    --nav-footer: #171717;
+    --primary-color: #010611;
+    --botoes-nav: #13375A;
+    --text-color: #F7F7F7;
+}

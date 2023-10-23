@@ -1,0 +1,230 @@
+/* ====== links com dropdown, barra de navegação com carrossel ====== */
+
+.offcanvas-responsivo-do-portal {
+    display: none;
+}
+
+.navbar-scroll-deitado {
+    display: flex;
+    position: relative;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background-color: var(--text-color-primary);
+}
+
+.btn-drop-scroll {
+    position: relative;
+    width: 300px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    background-color: var(--cor-nav-botao);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    color: var(--text-color-secondary);
+    text-align: left;
+}
+
+.seilameumano {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.btn-drop-scroll:hover {
+    background-color: var(--botao);
+}
+
+/* Remova a borda das setas */
+.glide__arrow {
+    border: none !important;
+    padding: 20px 15px !important;
+    margin: 0 -27px;
+}
+
+.glide__arrow i {
+    font-size: 20px;
+}
+
+.glide__arrow--left {
+    background-image: linear-gradient(270deg, rgba(70, 117, 183, 0.25) 13.3%, #4675B7 55%) !important;
+}
+
+
+.glide__arrow--right {
+    background-image: linear-gradient(-270deg, rgba(70, 117, 183, 0.25) 13.3%, #4675B7 55%) !important;
+}
+
+
+/* ====== Drops dos btn ====== */
+
+.drop-scroll-lateral-content {
+
+    display: block;
+    position: absolute;
+    width: 17.5%;
+    background-color: var(--text-color-primary); 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    padding: 10px; 
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .5s ease, opacity .5s ease; 
+
+}
+
+.show-dropdown {
+
+    max-height: 950px; 
+    opacity: 1;
+
+}
+
+.drop-scroll-lateral-content li {
+    list-style-type: none;
+    padding: 10px 30px;
+}
+
+.drop-scroll-lateral-content a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.drop-scroll-lateral-content a i {
+    padding-left: 15px;
+}
+
+.dropdown-content-ul {
+    list-style-type: none;
+    display: block;
+    position: absolute;
+    margin: 0 20px;
+    width: 17.5%;
+    background-color: var(--cor-nav-botao); 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    padding: 10px; 
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .5s ease, opacity .5s ease; 
+}
+
+.dropdown-content-ul li {
+    padding: 10px 30px;
+}
+
+.dropdown-content-ul a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.ativo {
+
+    max-height: 700px; 
+    opacity: 1;
+
+}
+
+.dropdown-content-ul-drop {
+    list-style-type: none;
+    display: block;
+    position: absolute;
+    margin: 0 20px;
+    width: 17.5%;
+    background-color: var(--cor-nav-botao); 
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); 
+    padding: 10px; 
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height .5s ease, opacity .5s ease; 
+}
+
+.dropdown-content-ul-drop li {
+    padding: 10px 30px;
+}
+
+.dropdown-content-ul-drop a {
+    color: var(--text-color-secondary);
+    text-decoration: none;
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+}
+
+
+.ativo-do-drop {
+    max-height: 700px;
+    opacity: 1;
+}
+
+/* ====== fim dos links com dropdown, barra de navegação com carrossel ====== */
+
+
+@media (max-width: 768px) {
+
+    .show-dropdown {
+        left: 90px !important;
+        width: 40%;
+        z-index: 2;
+    }
+
+    .ativo {
+        z-index: 3;
+        width: auto;
+    }
+
+    .ativo-do-drop {
+        top: 105% !important;
+        left: 50% !important;
+        z-index: 4;
+        width: 40%;
+    }
+
+    .btn-drop-scroll {
+        width: 200px !important;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+    .show-dropdown {
+        
+        width: 30%;
+        z-index: 2;
+    }
+
+    .ativo {
+        z-index: 3;
+        width: 30%;
+    }
+
+    .ativo-do-drop {
+
+        z-index: 4;
+        width: 23%;
+    }
+
+    .btn-drop-scroll {
+        width: 200px !important;
+    }
+
+    
+}

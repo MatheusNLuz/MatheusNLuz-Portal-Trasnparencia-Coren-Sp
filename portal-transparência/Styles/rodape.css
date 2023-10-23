@@ -1,0 +1,237 @@
+/* ====== Rodape ====== */
+.rodape {
+    width: 100%;
+    height: 60vh;
+    background-color: var(--cor-nav-botao);
+    text-align: center;
+    padding-top: 80px;
+}
+
+.rodape-container {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    color: var(--text-color-secondary);
+}
+
+.rodape-container h3 {
+    margin-left: 50px;
+}
+
+.lista-rodape {
+    list-style-type: none;
+    padding: 0 50px;
+}
+
+.lista-item-rodape {
+    padding-bottom: 15px;
+}
+
+.link-rodape {
+    text-decoration: none;
+    color: var(--text-color-secondary);
+}
+
+.link-rodape:hover {
+    text-decoration: none;
+    color: #d2d2d2;
+}
+
+.paragrafo-footer {
+    display: flex;
+    justify-content: center;
+    color: var(--text-color-secondary);
+}
+
+.linha {
+    margin: 20px 0;
+    padding: 0 100px;
+}
+
+
+.linha-rodape-desktop {
+    display: block;
+    border: 0.1px solid var(--text-color-secondary);
+}
+
+.offcanvas-content,
+.dropdown,
+.dropdown-content,
+.dropbtn,
+.left-icon,
+.right-icon,
+hr {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+
+    .lista-rodape,
+    .titulo-rodape,
+    .linha {
+        display: none;
+    }
+
+    /* ====== Rodape ====== */
+
+    .rodape {
+        position: relative;
+        height: 60%;
+    }
+
+    .dropdown {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: -90px;
+    }
+
+    .dropbtn {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .left-icon {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .right-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    .dropdown-content {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+
+    .dropdown-content.show {
+        max-height: 200px;
+        opacity: 1;
+    }
+
+    .dropdown-content li {
+        list-style-type: none;
+        padding: 10px 30px;
+    }
+
+    .dropdown-content a {
+        text-decoration: none;
+        display: flex;
+        color: white;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .rodape .paragrafo-footer {
+        font-size: 14px;
+        position: absolute;
+        bottom: 0;
+        left: 20px !important;
+        width: 90%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    hr {
+        display: block;
+        border: 0.1px solid #fff;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+
+    .lista-rodape,
+    .titulo-rodape,
+    .linha {
+        display: none;
+    }
+
+    /* ====== Rodape ====== */
+
+    .rodape {
+        position: relative;
+        height: 60%;
+    }
+
+    .dropdown {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: -90px;
+    }
+
+    .dropbtn {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .left-icon {
+        display: block;
+        margin-right: 20px;
+    }
+
+    .right-icon {
+        display: block;
+        margin-left: auto;
+    }
+
+    .dropdown-content {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+    }
+
+
+    .dropdown-content.show {
+        max-height: 200px;
+        opacity: 1;
+    }
+
+    .dropdown-content li {
+        list-style-type: none;
+        padding: 10px 30px;
+    }
+
+    .dropdown-content a {
+        text-decoration: none;
+        display: flex;
+        color: white;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .rodape .paragrafo-footer {
+        font-size: 14px;
+        position: absolute;
+        left: 30px;
+        bottom: 0;
+        width: 90%;
+        padding: 10px;
+    }
+
+    hr {
+        display: block;
+        border: 0.1px solid #fff;
+    }
+}

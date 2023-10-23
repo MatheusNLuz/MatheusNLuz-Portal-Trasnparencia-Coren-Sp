@@ -1,0 +1,231 @@
+.checkbox-dark-mode {
+    opacity: 0;
+    position: absolute;
+}
+
+.label-chk {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    position: relative;
+    height: 20px;
+    width: 50px;
+
+    transform: scale(.9);
+}
+
+
+.label-chk .ball {
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox-dark-mode:checked+.label-chk .ball {
+    transform: translateX(33px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.navbar-search.dark-mode {
+    background-color: var(--nav-footer);
+    color: var(--text-color);
+}
+
+.rodape.dark-mode {
+    background-color: var(--nav-footer);
+}
+
+.btn-btn-search.dark-mode,
+.balon-acessibility.dark-mode {
+    background-color: var(--botoes-nav);
+    color: var(--text-color);
+}
+
+.nav-container.dark-mode {
+    background-color: var(--primary-color);
+
+}
+
+.item-navbar.dark-mode {
+    color: var(--text-color);
+}
+
+.item-navbar.dark-mode::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--botoes-nav);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-navbar.dark-mode:hover::before {
+    transform: scaleX(1);
+}
+
+.conteudo-rodape.dark-mode {
+    color: var(--text-color);
+}
+
+.link-rodape.dark-mode {
+    color: var(--text-color);
+}
+
+.container.dark-mode {
+    background: url('../Images/Rectangle 43.png') rgba(0, 0, 0, 0.82) no-repeat;
+    background-size: cover;
+
+}
+
+.container.dark-mode h1 {
+    color: var(--text-color);
+}
+
+.eclipse.dark-mode {
+    background-color: var(--primary-color);
+}
+
+.eclipse.dark-mode i {
+    color: var(--text-color);
+}
+
+.eclipse.dark-mode a {
+    color: var(--text-color);
+}
+
+.label-chk.dark-mode {
+    background-color: var(--botoes-nav);
+}
+
+.offcanvas.dark-mode {
+    background-color: var(--nav-footer);
+    color: var(--text-color);
+}
+
+.offcanvas.dark-mode h4 {
+    color: var(--text-color);
+}
+
+.box-offcanvas.dark-mode {
+    background-color: var(--botoes-nav);
+    color: var(--text-color);
+}
+
+.link-do-offcanvas.dark-mode {
+    color: var(--text-color);
+}
+
+.link-do-offcanvas:hover.dark-mode {
+    color: #c9c9c9;
+}
+
+.link-do-offcanvas-bold.dark-mode {
+    color: var(--text-color);
+}
+
+.link-do-offcanvas-bold:hover.dark-mode {
+    color: #c9c9c9;
+}
+
+.link-do-offcanvas-bold.dark-mode i {
+    color: var(--text-color);
+}
+
+.linha-do-offcanvas.dark-mode {
+   border-color: var(--text-color);
+}
+
+.dropdown-content-offcanvas.dark-mode ul li a {
+    color: var(--text-color);
+}
+
+.btn-offcanvas.dark-mode {
+    background-color: var(--botoes-nav);
+}
+
+.conteudo-o-portal.dark-mode {
+    background: url('../Images/Rectangle\ 78.png') rgba(0, 0, 0, 0.82) no-repeat;
+    background-size: cover;
+}
+
+.conteudo-o-portal.dark-mode h1 {
+    color: var(--text-color);
+}
+
+.conteudo-o-portal.dark-mode .conteudo-escrito {
+    color: var(--text-color);
+}
+
+.navbar-scroll-deitado.dark-mode {
+    background-color: var(--nav-footer);
+}
+
+.btn-drop-scroll.dark-mode {
+    background-color: var(--botoes-nav);
+    color: var(--text-color);
+}
+
+
+.glide__arrow--left.dark-mode {
+    background-image: linear-gradient(270deg, rgba(70, 117, 183, 0.25) 13.3%, var(--nav-footer) 55%) !important;
+}
+
+.glide__arrow--right.dark-mode {
+    background-image: linear-gradient(-270deg, rgba(70, 117, 183, 0.25) 13.3%, var(--nav-footer) 55%) !important;
+}
+
+.offcanvas-menu.dark-mode {
+    background-color: var(--primary-color);
+}
+
+.offcanvas-menu.dark-mode > .offcanvas-nav {
+    background-color: var(--nav-footer);
+}
+
+.offcanvas-menu.dark-mode > .offcanvas-nav h4, 
+.offcanvas-menu.dark-mode > .offcanvas-nav a {
+    color: var(--text-color);
+}
+
+.redes-sociais.dark-mode {
+    background-color: var(--nav-footer);
+}
+
+.redes-sociais.dark-mode a {
+    color: var(--text-color);
+}
+
+.drop-scroll-lateral-content.dark-mode {
+    background-color: var(--primary-color);
+}
+
+.dropdown-content-ul.dark-mode {
+    background-color: var(--botoes-nav);
+}
+
+.dropdown-content-ul.dark-mode a,
+.drop-scroll-lateral-content.dark-mode a {
+    color: var(--text-color);
+}

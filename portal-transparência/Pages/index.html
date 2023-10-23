@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
 
-    <link rel="stylesheet" href="../Styles/style.css" />
+    <link rel="stylesheet" href="../Styles/app.css" />
 </head>
 
 <body>
@@ -31,8 +31,6 @@
             <a href="#" class="link-acessibility" id="mapa-do-portal"> Mapa do portal </a>
             <a class="vr"></a>
             <a href="#" class="link-acessibility"> Acessibilidade </a>
-            <a class="vr"></a>
-            <a href="#" class="link-acessibility"> Contraste </a>
             <a class="vr"></a>
             <a href="#" class="link-acessibility"> A- </a>
             <a class="vr"></a>
@@ -102,6 +100,15 @@
                 <li class="list-navbar-item">
                     <a href="#" class="item-navbar">AGENDA DE AUTORIDADES</a>
                 </li>
+                <div>
+                    <input type="checkbox" class="checkbox-dark-mode" id="chk">
+    
+                    <label class="label-chk" for="chk">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                        <div class="ball"></div>
+                    </label>
+                </div>
             </ul>
         </div>
     </nav>
@@ -110,7 +117,7 @@
     <!-- ====== Conteudo Principal ====== -->
 
     <main class="container">
-        <h2> PORTAL DA TRANSPARÊNCIA </h2>
+        <h1> PORTAL DA TRANSPARÊNCIA </h1>
 
         <div class="container-conteudo">
             <div class="eclipse">
@@ -425,7 +432,7 @@
     <!-- ====== Rodape ====== -->
     <footer class="rodape">
         <div class="rodape-container">
-            <div class="">
+            <div class="conteudo-rodape">
                 <h3 class="titulo-rodape">
                     <i class="fa-solid fa-map-location-dot"></i>
                     Endereço
@@ -449,7 +456,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="">
+            <div class="conteudo-rodape">
                 <h3 class="titulo-rodape">
                     <i class="fa-solid fa-business-time"></i>
                     Funcionamento
@@ -467,7 +474,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="">
+            <div class="conteudo-rodape">
                 <h3 class="titulo-rodape">
                     <i class="fa-solid fa-compass"></i>
                     Páginas
@@ -500,7 +507,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="">
+            <div class="conteudo-rodape">
                 <h3 class="titulo-rodape">
                     <i class="fa-solid fa-circle-info"></i>
                     Acesso á informação
@@ -658,8 +665,21 @@
 
     <!-- ====== Fim Rodape ====== -->
 
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
 
     <script src="../Js/script.js"></script>
+    <script src="../Js/dark-mode.js"></script>
 </body>
 
 </html>
