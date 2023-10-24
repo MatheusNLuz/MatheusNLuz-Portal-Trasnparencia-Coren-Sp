@@ -54,7 +54,6 @@ h1 {
 .eclipse:hover {
     width: 130px;
     height: 130px;
-    margin: 0 70px;
 }
 
 .eclipse:hover i {
@@ -309,7 +308,7 @@ h4 {
 
 /* ====== fim do Conteudo do mapa do portal ====== */
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
     /* ===== Conteudo Principal ====== */
 
     .container {
@@ -399,6 +398,8 @@ h4 {
     }
 
     .eclipse i {
+        position: relative;
+        top: 10px;
         color: #fff;
         font-size: 55px;
     }
@@ -410,4 +411,6 @@ h4 {
         text-decoration: none;
         line-height: 1.2;
     }
+
+
 }

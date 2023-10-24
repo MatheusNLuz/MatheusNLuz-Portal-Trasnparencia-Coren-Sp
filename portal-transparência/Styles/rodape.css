@@ -4,7 +4,7 @@
     height: 60vh;
     background-color: var(--cor-nav-botao);
     text-align: center;
-    padding-top: 80px;
+    padding-top: 65px;
 }
 
 .rodape-container {
@@ -64,7 +64,7 @@ hr {
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
 
 
     .lista-rodape,

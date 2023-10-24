@@ -33,7 +33,7 @@
 
 /* ====== Final Conteudo Principal dos conteudos de cada pagina ====== */
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
     
     .conteudo-o-portal {
         position: relative;

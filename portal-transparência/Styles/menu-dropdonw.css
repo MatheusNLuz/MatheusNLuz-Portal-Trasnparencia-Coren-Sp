@@ -30,13 +30,6 @@
     text-align: left;
 }
 
-.seilameumano {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
-
-
 .btn-drop-scroll:hover {
     background-color: var(--botao);
 }
@@ -179,7 +172,7 @@
 /* ====== fim dos links com dropdown, barra de navegação com carrossel ====== */
 
 
-@media (max-width: 768px) {
+@media (max-width: 799px) {
 
     .show-dropdown {
         left: 90px !important;
@@ -200,7 +193,7 @@
     }
 
     .btn-drop-scroll {
-        width: 200px !important;
+        width: 190px !important;
     }
 }
 
